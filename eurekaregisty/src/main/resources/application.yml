@@ -1,0 +1,14 @@
+server:
+  port: 8080  #tomcat 启动端口号
+
+#服务注册中心配置,就是$就是取当前的项目的名称
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    healthcheck:
+      enabled: true
