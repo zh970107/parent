@@ -1,0 +1,16 @@
+server:
+  port: 8083  #tomcat 启动端口号
+
+#服务注册中心配置
+eureka:
+
+  client:
+    serviceUrl:
+      #这个地址填的是注册中心eureka-server的地址
+      defaultZone: http://localhost:8080/eureka/
+    healthcheck:
+      enabled: true
+#这个就是可以在服务器上面写发布者名字,注意层级关系
+spring :
+  application:
+    name: provider
