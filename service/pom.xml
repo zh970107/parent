@@ -41,14 +41,10 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <!--导入dao层的项目-->
         <dependency>
-            <groupId>cn.China</groupId>
-            <artifactId>dao</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>

@@ -7,4 +7,6 @@ public interface StudentMapper {
 
     Student getInfo();
 
+    int insert(Student record);
+
 }

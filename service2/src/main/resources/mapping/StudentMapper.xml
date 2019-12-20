@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.StudentMapper" >
+  <resultMap id="BaseResultMap" type="entity.Student" >
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="AGE" property="age" jdbcType="DECIMAL" />
+    <result column="GENDER" property="gender" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, NAME, AGE, GENDER
+  </sql>
+
+  <insert id="insert" parameterType="entity.Student" >
+    insert into STUDENT (ID, NAME, AGE, 
+      GENDER)
+    values (#{id,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=DECIMAL}, 
+      #{gender,jdbcType=VARCHAR})
+  </insert>
+</mapper>
